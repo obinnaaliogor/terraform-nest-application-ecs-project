@@ -10,7 +10,7 @@ variable "region" {
 variable "profile" {
   type        = string
   description = "IAM user credential executing the terraform script"
-  default     = "wiz"
+  default     = "obinna"
 
 }
 
@@ -60,7 +60,7 @@ variable "cpu_architecture" {
 variable "container_image" {
   type        = string
   description = "nest-app image stored in amazon ecr "
-  default     = "475771302907.dkr.ecr.us-east-1.amazonaws.com/nestapp:8"
+  default     = "612500737416.dkr.ecr.us-east-1.amazonaws.com/nestapp:8"
 }
 
 #Route53 variables
@@ -68,7 +68,7 @@ variable "container_image" {
 variable "domain_name" {
   type        = string
   description = "Hosted Zone or domain name "
-  default     = "obinnaaliogor.com"
+  default     = "wiz-obi.com"
 }
 
 variable "record_name" {
@@ -81,5 +81,5 @@ variable "record_name" {
 variable "subject_alternative_names" {
   type        = list(string)
   description = "subject alternative names for cert manager "
-  default     = ["*.obinnaaliogor.com"]
+  default     = ["*.wiz-obi.com"]
 }
